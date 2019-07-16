@@ -8,4 +8,4 @@ maintenance_window: sun:18:30-sun:19:00
 storage_encrypted: true
 
 family: postgres10
-engineVersion: '10.6
+engineVersion: '10.6'
