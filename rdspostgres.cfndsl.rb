@@ -57,6 +57,7 @@ CloudFormation do
     PreferredMaintenanceWindow maintenance_window if defined? maintenance_window
     PubliclyAccessible publicly_accessible if defined? publicly_accessible
     StorageEncrypted storage_encrypted if defined? storage_encrypted
+    KmsKeyId kms_key_id if (defined? kms_key_id) && (storage_encrypted == true)
     Tags  tags + [{ Key: 'Name', Value: FnJoin('-', [ Ref(:EnvironmentName), component_name, 'instance' ])}]
     Metadata({
       cfn_nag: {
