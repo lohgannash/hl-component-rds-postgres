@@ -56,6 +56,7 @@ CloudFormation do
     MultiAZ Ref('MultiAZ')
     PreferredMaintenanceWindow maintenance_window if defined? maintenance_window
     PubliclyAccessible publicly_accessible if defined? publicly_accessible
+    StorageEncrypted storage_encrypted if defined? storage_encrypted
     Tags  tags + [{ Key: 'Name', Value: FnJoin('-', [ Ref(:EnvironmentName), component_name, 'instance' ])}]
     Metadata({
       cfn_nag: {

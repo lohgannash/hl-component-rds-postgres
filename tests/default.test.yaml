@@ -2,3 +2,6 @@ test_metadata:
   type: config
   name: default
   description: test with the default config
+
+storage_encrypted: true
+

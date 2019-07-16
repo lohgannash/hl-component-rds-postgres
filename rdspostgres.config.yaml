@@ -28,3 +28,5 @@ security_group:
         ToPort: 5432
     ips:
       - stack
+
+storage_encrypted: true
