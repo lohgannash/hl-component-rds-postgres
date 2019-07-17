@@ -1,4 +1,9 @@
 test_metadata:
   type: config
   name: default
-  description: test with the default config
+  description: test with encryption on & Postgres 10
+
+storage_encrypted: true
+
+family: postgres10
+engineVersion: '10.6'

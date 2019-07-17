@@ -5,9 +5,10 @@ ip_blocks:
   local:
     - 127.0.0.1/32
 
-# CLI to query engine and family: aws rds describe-db-engine-versions
-engineVersion: '10.4'
-family: postgres10
+# CLI to query engine and family: aws rds describe-db-engine-versions, Select appropriate family and engine version
+
+# engineVersion: '9.x.x' | '10.x' | '11.x'
+# family: postgres9 | postgres10 | postgres11
 
 publicly_accessible: false
 deletion_policy: Snapshot
@@ -28,3 +29,7 @@ security_group:
         ToPort: 5432
     ips:
       - stack
+
+storage_encrypted: false
+#kms_key_id: arn:aws:kms:ap-southeast-2:111111111111:key/12345678-1234-1234-1234-111111111111
+
